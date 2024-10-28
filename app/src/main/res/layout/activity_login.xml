@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:layout_marginEnd="25dp"
         android:text="KTMU Food MYO"
         android:textSize="30dp"
@@ -47,7 +47,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/loginLoginValue"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/loginPasswordValue"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -72,7 +72,7 @@
             android:textColorHint="#8B6ED7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/loginLoginValue" />
 
         <TextView
             android:id="@+id/textView2"
@@ -82,7 +82,7 @@
             android:layout_marginEnd="40dp"
             android:text="Forgot password?"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordValue" />
 
         <Button
             android:id="@+id/button2"
