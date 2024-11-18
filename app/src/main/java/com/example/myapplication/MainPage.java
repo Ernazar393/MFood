@@ -4,12 +4,19 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -30,6 +37,9 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        showAllergyDialog();
+
         ImageView images = findViewById(R.id.imageView4);
         TextView ingredients = findViewById(R.id.textView4);
         TextView whereICanBuy = findViewById(R.id.textView5);
@@ -61,6 +71,7 @@ public class MainPage extends AppCompatActivity {
         randomFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String[] namesOfFood = {"Lagman", "Ramen", "Sup", "Plov",
                         "Jasmyk", "Chuchuk", "Besh barmak", "Chymchyma", "Apamdyn Kattamasy",
                         "Samsy", "Koldun Kurgak Kesmesi", "USA zavtrak", "AshlyanFu", "Zharkop",
@@ -95,4 +106,40 @@ public class MainPage extends AppCompatActivity {
         });
 
     }
+
+    private void showAllergyDialog() {
+            // Inflate the custom dialog layout
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.allergy_dialog_page, null);
+
+        EditText whatHaveAllergy = dialogView.findViewById(R.id.editTextText2);
+        EditText sick = dialogView.findViewById(R.id.editTextText3);
+        CheckBox trueFood = dialogView.findViewById(R.id.checkBox);
+        CheckBox sportFood = dialogView.findViewById(R.id.checkBox2);
+        Spinner trueIngredients = dialogView.findViewById(R.id.spinner);
+        RadioButton vegetarian = dialogView.findViewById(R.id.radioButton);
+        RadioButton vegan = dialogView.findViewById(R.id.radioButton3);
+        RadioButton allFood = dialogView.findViewById(R.id.radioButton2);
+        Button save = dialogView.findViewById(R.id.button4);
+
+
+
+
+            // Build the dialog
+            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+            dialogBuilder.setView(dialogView);
+            AlertDialog alertDialog = dialogBuilder.create();
+
+            // Set button click listener (e.g., handle the input)
+        save.setOnClickListener(v -> {
+
+                // Handle the input (e.g., print it or save it)
+                // For this example, just show the input in a Toast
+//                Toast.makeText(MainPage.this, "I hate you Nurs!", Toast.LENGTH_SHORT).show();
+                alertDialog.dismiss(); // Close the dialog
+            });
+
+            // Show the dialog
+            alertDialog.show();
+        }
 }
