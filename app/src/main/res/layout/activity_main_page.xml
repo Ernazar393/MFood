@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage">
+    tools:context=".activity.MainPage">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -19,20 +19,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/medium" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="50dp"
-        android:background="#6F47D7"
-        android:text="Ingredients"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+    <ScrollView
+        android:id="@+id/ingredient_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/Theme.MyApplication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textColor="#6F47D7"
+            android:textSize="20dp" />
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView5"
@@ -47,7 +52,7 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/ingredient_scroll" />
 
     <TextView
         android:id="@+id/textView6"
@@ -82,6 +87,21 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:text="Names"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:textStyle="italic"
+        android:textColor="#114DEF"
+        android:text="Видео сабагы"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

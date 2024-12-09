@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "931165693968",
+    "firebase_url": "https://apamdyntamagy-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "apamdyntamagy",
+    "storage_bucket": "apamdyntamagy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931165693968:android:f8dedb782ba0ee0de24295",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGFicYcZS4vMCUgyIWCOWTY1kkKi2L9Qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
